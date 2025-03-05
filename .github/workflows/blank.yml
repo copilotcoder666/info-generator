@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Info Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fake Info Generator</h1>
+  <p>Type in a topic, and we'll create something absurd for you!</p>
+  <input type="text" id="userInput" placeholder="Enter a topic...">
+  <button onclick="generateFakeInfo()">Generate</button>
+  <div class="output" id="output"></div>
+
+  <script>
+    function generateFakeInfo() {
+      const input = document.getElementById("userInput").value;
+      const fakeFacts = [
+        `Did you know that ${input} was invented by aliens in 1834?`,
+        `Scientists recently discovered that ${input} can double as a time machine.`,
+        `Legend has it that ${input} can only be found on the dark side of the moon.`,
+        `${input} is actually powered by invisible unicorns.`,
+        `Fun fact: ${input} was first used by penguins to communicate with dolphins.`
+      ];
+
+      const randomFact = fakeFacts[Math.floor(Math.random() * fakeFacts.length)];
+      document.getElementById("output").innerText = randomFact;
+    }
+  </script>
+</body>
+</html>
