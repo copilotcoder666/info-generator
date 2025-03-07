@@ -34,11 +34,7 @@
     function generateFakeInfo() {
       const input = document.getElementById("userInput").value;
       const fakeFacts = [
-        `Did you know that ${input} was invented by aliens in 1834?`,
-        `Scientists recently discovered that ${input} can double as a time machine.`,
-        `Legend has it that ${input} can only be found on the dark side of the moon.`,
-        `${input} is actually powered by invisible unicorns.`,
-        `Fun fact: ${input} was first used by penguins to communicate with dolphins.`
+         `Fun fact: you are extremely retarded!`
       ];
 
       const randomFact = fakeFacts[Math.floor(Math.random() * fakeFacts.length)];
